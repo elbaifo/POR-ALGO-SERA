@@ -61,7 +61,9 @@ body {
 }
 
 
+/* ========================= */
 /* HEADER */
+/* ========================= */
 
 #header {
 
@@ -76,9 +78,9 @@ body {
 
     background: transparent;
 
-    z-index: 9000;
-
     transition: .35s ease;
+
+    z-index: 9000;
 
 }
 
@@ -120,7 +122,9 @@ body {
 }
 
 
-/* MENU */
+/* ========================= */
+/* MENÚ */
+/* ========================= */
 
 #navigation {
 
@@ -163,7 +167,136 @@ body {
 }
 
 
+/* ========================= */
+/* POPUP */
+/* ========================= */
+
+#welcome-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0,0,0,.75);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9999;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition: opacity .5s ease, visibility .5s ease;
+
+}
+
+
+#welcome-popup.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.popup {
+
+    width: 700px;
+
+    max-width: 90%;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
+
+    animation: popupEnter .8s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.popup h1 {
+
+    color: var(--primary);
+
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+.popup p {
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+#enter-button {
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px 35px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+#enter-button:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-2px) scale(1.03);
+
+}
+
+
+#enter-button:active {
+
+    transform: scale(.97);
+
+}
+
+
+
+/* ========================= */
 /* CONTENIDO */
+/* ========================= */
 
 main {
 
@@ -233,10 +366,14 @@ section {
 
     text-align: center;
 
+    margin-bottom: 20px;
+
 }
 
 
-/* CANCIONES */
+/* ========================= */
+/* LISTA DE CANCIONES */
+/* ========================= */
 
 .songs-section {
 
@@ -257,9 +394,9 @@ section {
 
     letter-spacing: 6px;
 
-    margin-bottom: 70px;
-
     color: white;
+
+    margin-bottom: 70px;
 
     text-align: left;
 
@@ -272,13 +409,13 @@ section {
 
     max-width: 700px;
 
-    padding: 35px;
-
     background: var(--surface);
 
     border: 1px solid var(--border);
 
     border-radius: var(--radius);
+
+    padding: 35px;
 
     text-align: left;
 
@@ -289,9 +426,9 @@ section {
 
     font-size: 2rem;
 
-    margin-bottom: 20px;
-
     color: white;
+
+    margin-bottom: 20px;
 
 }
 
@@ -300,14 +437,29 @@ section {
 
     color: var(--text-secondary);
 
+    font-size: 1.05rem;
+
     line-height: 1.8;
 
     margin-bottom: 30px;
 
+    text-align: left;
+
 }
 
 
-/* ANIMACIÓN POPUP */
+.song-card iframe {
+
+    width: 100%;
+
+    border: none;
+
+}
+
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
 
 @keyframes popupEnter {
 
@@ -318,7 +470,6 @@ section {
         transform: translateY(-60px);
 
     }
-
 
     100% {
 
