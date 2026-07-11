@@ -39,6 +39,39 @@ body {
     overflow-x: hidden;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 35px;
+
+    background: transparent;
+
+    transition: .35s ease;
+
+    z-index: 9000;
+}
+
+#header.scrolled {
+    background: rgba(5, 7, 12, .65);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+#header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+
 #welcome-popup {
     position: fixed;
     inset: 0;
@@ -47,7 +80,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0,0,0,.75);
     backdrop-filter: blur(8px);
 
     z-index: 9999;
@@ -76,30 +109,26 @@ body {
 
     text-align: center;
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .45);
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
 
-    animation: popupEnter .8s cubic-bezier(.22, 1, .36, 1);
+    animation: popupEnter .8s cubic-bezier(.22,1,.36,1);
 }
 
 .popup h1 {
     color: var(--primary);
     font-size: 2.2rem;
-
     margin-bottom: 20px;
 }
 
 .popup p {
     color: var(--text-secondary);
-
     font-size: 1.05rem;
     line-height: 1.8;
-
     margin-bottom: 35px;
 }
 
 #enter-button {
     background: var(--primary);
-
     color: white;
 
     border: none;
@@ -117,7 +146,6 @@ body {
 
 #enter-button:hover {
     background: var(--primary-hover);
-
     transform: translateY(-2px) scale(1.03);
 }
 
