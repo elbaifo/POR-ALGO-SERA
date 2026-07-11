@@ -77,6 +77,8 @@ body {
     text-align: center;
 
     box-shadow: 0 25px 60px rgba(0, 0, 0, .45);
+
+    animation: popupEnter .8s cubic-bezier(.22, 1, .36, 1);
 }
 
 .popup h1 {
@@ -110,128 +112,29 @@ body {
 
     cursor: pointer;
 
-    transition: var(--transition);
+    transition: .25s ease;
 }
 
 #enter-button:hover {
     background: var(--primary-hover);
-    transform: translateY(-2px);
-}@font-face {
-    font-family: "SF Pro";
-    src: url("./SF-Pro.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+
+    transform: translateY(-2px) scale(1.03);
 }
 
-:root {
-    --background: #05070C;
-    --surface: #111827;
-
-    --text: #F5F5F5;
-    --text-secondary: #A8B3C2;
-
-    --primary: #5B8CFF;
-    --primary-hover: #79A2FF;
-
-    --border: rgba(255, 255, 255, 0.08);
-
-    --transition: .35s ease;
-    --radius: 18px;
+#enter-button:active {
+    transform: scale(.97);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@keyframes popupEnter {
 
-html {
-    scroll-behavior: smooth;
-}
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
 
-body {
-    font-family: "SF Pro", sans-serif;
-    background: var(--background);
-    color: var(--text);
-    overflow-x: hidden;
-}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-#welcome-popup {
-    position: fixed;
-    inset: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: rgba(0, 0, 0, .75);
-    backdrop-filter: blur(8px);
-
-    z-index: 9999;
-
-    opacity: 1;
-    visibility: visible;
-
-    transition: opacity .5s ease, visibility .5s ease;
-}
-
-#welcome-popup.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.popup {
-    width@font-face700px;
-    max-width: 90%;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-
-    padding: 45px;
-
-    text-align: center;
-
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .45);
-}
-
-.popup h1 {
-    color: var(--primary);
-    font-size: 2.2rem;
-
-    margin-bottom: 20px;
-}
-
-.popup p {
-    color: var(--text-secondary);
-
-    font-size: 1.05rem;
-    line-height: 1.8;
-
-    margin-bottom: 35px;
-}
-
-#enter-button {
-    background: var(--primary);
-
-    color: white;
-
-    border: none;
-    border-radius: 12px;
-
-    padding: 15px 35px;
-
-    font-family: inherit;
-    font-size: 1rem;
-
-    cursor: pointer;
-
-    transition: var(--transition);
-}
-
-#enter-button:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
 }
