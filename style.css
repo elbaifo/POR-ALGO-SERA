@@ -6,7 +6,9 @@
     font-display: swap;
 }
 
+
 :root {
+
     --background: #05070C;
     --surface: #111827;
 
@@ -19,25 +21,37 @@
     --border: rgba(255,255,255,.08);
 
     --radius: 18px;
+
 }
+
 
 * {
+
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
+
 body {
+
     font-family: "SF Pro", sans-serif;
 
     background: var(--background);
+
     color: var(--text);
 
     overflow-x: hidden;
+
 }
 
 
@@ -55,9 +69,9 @@ body {
 
     background: transparent;
 
-    transition: .35s ease;
-
     z-index: 9000;
+
+    transition: .35s ease;
 
 }
 
@@ -91,6 +105,8 @@ body {
     color: white;
 
     letter-spacing: 4px;
+
+    user-select: none;
 
     white-space: nowrap;
 
@@ -225,7 +241,7 @@ body {
 }
 
 
-/* BOTON */
+/* BOTÓN */
 
 #enter-button {
 
@@ -292,28 +308,53 @@ section {
 }
 
 
-#inicio h2 {
+/* CONTENIDO DE PÁGINAS */
+
+.home-content {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.home-content h2 {
 
     font-size: 4rem;
 
     letter-spacing: 8px;
 
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+
+    color: white;
 
 }
 
 
-#inicio p {
+.home-content p {
 
-    max-width: 650px;
+    max-width: 700px;
 
-    text-align: center;
+    margin-bottom: 25px;
 
     color: var(--text-secondary);
 
     font-size: 1.2rem;
 
     line-height: 1.8;
+
+    text-align: center;
 
 }
 
