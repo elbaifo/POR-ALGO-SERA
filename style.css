@@ -1,11 +1,11 @@
 @font-face {
     font-family: "SF Pro";
-    src: url("assets/fonts/SF-Pro.ttf") format("truetype");
+    src: url("SF-Pro.ttf") format("truetype");
 }
 
 :root {
     --background: #05070C;
-    --surface: #0D1117;
+    --surface: #111827;
 
     --text: #F5F5F5;
     --text-secondary: #A8B3C2;
@@ -15,8 +15,8 @@
 
     --border: rgba(255, 255, 255, 0.08);
 
-    --transition: .3s ease;
-    --radius: 16px;
+    --transition: .35s ease;
+    --radius: 18px;
 }
 
 * {
@@ -34,4 +34,83 @@ body {
     background: var(--background);
     color: var(--text);
     overflow-x: hidden;
+}
+
+#welcome-popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fondo: rgba(0, 0, 0, .75);
+    filtro de fondo: desenfocar(8px);
+
+    índice z: 9999;
+
+    opacidad: 1;
+    visibilidad: visible;
+
+    transición: opacidad .5s ease, visibilidad .5s ease;
+}
+
+#welcome-popup.hidden {
+    opacidad: 0;
+    visibilidad: oculto;
+}
+
+.popup {
+    ancho: 700px;
+    ancho máximo: 90%;
+
+    fondo: var(--superficie);
+
+    frontera: 1px sólido var(--frontera);
+    radio fronterizo: var(--radio);
+
+    acolchado: 45px;
+
+    alineación de texto: centro;
+
+    caja-sombra: 0 25px 60px rgba(0, 0, 0, .45);
+}
+
+.ventana emergente h1 {
+    color: var(--primaria);
+    tamaño de fuente: 2.2rem;
+
+    margen inferior: 20px;
+}
+
+.ventana emergente p {
+    color: var(--texto secundario);
+
+    tamaño de fuente: 1.05rem;
+    altura de línea: 1.8;
+
+    margen inferior: 35px;
+}
+
+#enter-button {
+    fondo: var(--primaria);
+
+    color: blanco;
+
+    frontera: ninguno;
+    radio fronterizo: 12px;
+
+    acolchado: 15px 35px;
+
+    familia de fuentes: heredar;
+    tamaño de fuente: 1rem;
+
+    cursor: puntero;
+
+    transición: var(--transición);
+}
+
+#enter-button:hover {
+    fondo: var(--primario-hover);
+    transformar: traducirY(-2px);
 }
