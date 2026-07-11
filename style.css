@@ -1,8 +1,110 @@
+@font-face {
+    font-family: "SF Pro";
+    src: url("./SF-Pro.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --background: #05070C;
+    --surface: #111827;
+
+    --text: #F5F5F5;
+    --text-secondary: #A8B3C2;
+
+    --primary: #5B8CFF;
+    --primary-hover: #79A2FF;
+
+    --border: rgba(255,255,255,.08);
+
+    --radius: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "SF Pro", sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+
+/* HEADER */
+
+#header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 55px;
+
+    background: transparent;
+
+    transition: .35s ease;
+
+    z-index: 9000;
+
+}
+
+
+#header.scrolled {
+
+    background: rgba(5,7,12,.65);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+#header h1 {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+    margin: 0;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+
+}
+
+
+/* MENU */
+
 #navigation {
 
     position: absolute;
 
     right: 35px;
+
     top: 50%;
 
     transform: translateY(-50%);
@@ -12,6 +114,7 @@
     gap: 25px;
 
 }
+
 
 #navigation a {
 
@@ -29,12 +132,141 @@
 
 }
 
+
 #navigation a:hover {
 
     color: white;
 
 }
 
+
+/* POPUP */
+
+#welcome-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0,0,0,.75);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9999;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition: opacity .5s ease, visibility .5s ease;
+
+}
+
+
+#welcome-popup.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.popup {
+
+    width: 700px;
+
+    max-width: 90%;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
+
+    animation: popupEnter .8s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.popup h1 {
+
+    color: var(--primary);
+
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+.popup p {
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* BOTON */
+
+#enter-button {
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px 35px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+#enter-button:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-2px) scale(1.03);
+
+}
+
+
+#enter-button:active {
+
+    transform: scale(.97);
+
+}
+
+
+/* CONTENIDO */
 
 main {
 
@@ -82,5 +314,29 @@ section {
     font-size: 1.2rem;
 
     line-height: 1.8;
+
+}
+
+
+/* ANIMACIONES */
+
+@keyframes popupEnter {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(-60px);
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
 
 }
