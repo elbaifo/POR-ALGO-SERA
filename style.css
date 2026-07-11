@@ -12,7 +12,6 @@
 
 }
 
-
 :root {
 
     --background: #05070C;
@@ -30,7 +29,6 @@
 
 }
 
-
 * {
 
     margin: 0;
@@ -40,13 +38,11 @@
 
 }
 
-
 html {
 
     scroll-behavior: smooth;
 
 }
-
 
 body {
 
@@ -60,10 +56,7 @@ body {
 
 }
 
-
-/* ========================= */
-/* HEADER */
-/* ========================= */
+/* ================= HEADER ================= */
 
 #header {
 
@@ -73,7 +66,6 @@ body {
     left: 0;
 
     width: 100%;
-
     height: 55px;
 
     background: transparent;
@@ -84,7 +76,6 @@ body {
 
 }
 
-
 #header.scrolled {
 
     background: rgba(5,7,12,.65);
@@ -94,7 +85,6 @@ body {
     border-bottom: 1px solid rgba(255,255,255,.08);
 
 }
-
 
 #header h1 {
 
@@ -115,16 +105,13 @@ body {
 
     letter-spacing: 4px;
 
-    user-select: none;
-
     white-space: nowrap;
+
+    user-select: none;
 
 }
 
-
-/* ========================= */
-/* MENÚ */
-/* ========================= */
+/* ================= MENÚ ================= */
 
 #navigation {
 
@@ -142,7 +129,6 @@ body {
 
 }
 
-
 #navigation a {
 
     color: rgba(255,255,255,.75);
@@ -159,17 +145,13 @@ body {
 
 }
 
-
 #navigation a:hover {
 
     color: white;
 
 }
 
-
-/* ========================= */
-/* POPUP */
-/* ========================= */
+/* ================= POPUP ================= */
 
 #welcome-popup {
 
@@ -197,7 +179,6 @@ body {
 
 }
 
-
 #welcome-popup.hidden {
 
     opacity: 0;
@@ -205,7 +186,6 @@ body {
     visibility: hidden;
 
 }
-
 
 .popup {
 
@@ -229,7 +209,6 @@ body {
 
 }
 
-
 .popup h1 {
 
     color: var(--primary);
@@ -239,7 +218,6 @@ body {
     margin-bottom: 20px;
 
 }
-
 
 .popup p {
 
@@ -252,7 +230,6 @@ body {
     margin-bottom: 35px;
 
 }
-
 
 #enter-button {
 
@@ -276,7 +253,6 @@ body {
 
 }
 
-
 #enter-button:hover {
 
     background: var(--primary-hover);
@@ -285,25 +261,19 @@ body {
 
 }
 
-
 #enter-button:active {
 
     transform: scale(.97);
 
 }
 
-
-
-/* ========================= */
-/* CONTENIDO */
-/* ========================= */
+/* ================= CONTENIDO ================= */
 
 main {
 
     width: 100%;
 
 }
-
 
 section {
 
@@ -320,7 +290,6 @@ section {
     padding: 100px 40px;
 
 }
-
 
 .home-content {
 
@@ -340,19 +309,17 @@ section {
 
 }
 
-
 .home-content h2 {
 
     font-size: 4rem;
 
     letter-spacing: 8px;
 
-    margin-bottom: 35px;
-
     color: white;
 
-}
+    margin-bottom: 35px;
 
+}
 
 .home-content p {
 
@@ -370,18 +337,32 @@ section {
 
 }
 
+/* ========================= */
+/* RECUERDOS */
+/* ========================= */
 
-/* ========================= */
-/* LISTA DE CANCIONES */
-/* ========================= */
+.songs-wrapper {
+
+    min-height: auto;
+
+    display: block;
+
+    padding: 0;
+
+}
+
 
 .songs-section {
 
-    width: 100%;
+    width: calc(100% - 120px);
 
-    max-width: 850px;
+    max-width: none;
 
-    margin-top: 400px;
+    margin-top: 260px;
+
+    margin-left: 60px;
+
+    margin-bottom: 120px;
 
     text-align: left;
 
@@ -390,9 +371,9 @@ section {
 
 .songs-section h3 {
 
-    font-size: 3rem;
+    font-size: 2.6rem;
 
-    letter-spacing: 6px;
+    letter-spacing: 5px;
 
     color: white;
 
@@ -405,9 +386,7 @@ section {
 
 .song-card {
 
-    width: 100%;
-
-    max-width: 700px;
+    width: min(850px, 100%);
 
     background: var(--surface);
 
@@ -424,11 +403,24 @@ section {
 
 .song-card h4 {
 
-    font-size: 2rem;
+    font-size: 2.3rem;
 
     color: white;
 
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+
+}
+
+
+.song-card h5 {
+
+    font-size: 1.15rem;
+
+    font-weight: 500;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 28px;
 
 }
 
@@ -439,11 +431,11 @@ section {
 
     font-size: 1.05rem;
 
-    line-height: 1.8;
-
-    margin-bottom: 30px;
+    line-height: 1.9;
 
     text-align: left;
+
+    margin-bottom: 35px;
 
 }
 
