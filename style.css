@@ -250,6 +250,36 @@ color:var(--primary-hover);
 transform:translateX(-3px);
 }
 
+.index-title{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+#songs-toggle{
+background:none;
+border:none;
+color:var(--text-secondary);
+cursor:pointer;
+font-size:.9rem;
+transition:.25s;
+}
+
+#songs-toggle:hover{
+color:white;
+}
+
+.index-sub{
+display:none;
+flex-direction:column;
+gap:10px;
+margin:2px 0 10px 16px;
+}
+
+.index-sub.active{
+display:flex;
+}
+
 .index-sub{
 display:flex;
 flex-direction:column;
