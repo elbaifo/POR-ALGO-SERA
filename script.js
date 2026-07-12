@@ -62,14 +62,21 @@ document.querySelectorAll("a").forEach(link => {
 const songsToggle = document.getElementById("songs-toggle");
 const songsMenu = document.querySelector(".index-sub");
 
-if(songsToggle && songsMenu){
+if (songsToggle && songsMenu) {
 
-    songsToggle.addEventListener("click", () => {
+    songsToggle.addEventListener("click", function () {
 
         songsMenu.classList.toggle("active");
 
-        songsToggle.textContent = 
-        songsMenu.classList.contains("active") ? "▲" : "▼";
+        if (songsMenu.classList.contains("active")) {
+
+            songsToggle.innerHTML = "▲";
+
+        } else {
+
+            songsToggle.innerHTML = "▼";
+
+        }
 
     });
 
