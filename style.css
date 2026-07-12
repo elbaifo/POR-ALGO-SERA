@@ -466,8 +466,8 @@ section {
 
 .playlist-extra {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 220px;
+    margin-bottom: 60px;
 }
 
 .playlist-extra p {
@@ -480,14 +480,14 @@ section {
     display: inline-block;
     padding: 14px 30px;
     border-radius: 30px;
-    background-color: #1DB954;
-    color: white;
+    background: #79A2FF;
+    color: #05070C;
     text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-weight: 700;
+    transition: transform 0.3s ease, background .3s ease;
 }
 
 .spotify-button:hover {
+    background: #A8C2FF;
     transform: scale(1.05);
-    opacity: 0.9;
 }
