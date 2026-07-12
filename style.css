@@ -788,3 +788,9 @@ section {
 
 
 }
+
+
+#canciones,
+#personajes {
+    scroll-margin-top: 100px;
+}
