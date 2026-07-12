@@ -282,19 +282,25 @@ align-items:center;
 gap:8px;
 }
 
-#songs-toggle{
+#songs-toggle,
+#characters-toggle{
 background:none;
 border:none;
 color:var(--text-secondary);
 cursor:pointer;
 font-size:.9rem;
 transition:.25s;
+padding:0;
+outline:none;
+box-shadow:none;
+appearance:none;
+-webkit-appearance:none;
 }
 
-#songs-toggle:hover{
+#songs-toggle:hover,
+#characters-toggle:hover{
 color:white;
 }
-
 .index-sub{
 display:flex;
 flex-direction:column;
