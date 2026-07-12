@@ -1,878 +1,489 @@
-@font-face {
+@font-face{
+font-family:"SF Pro";
+src:url("./SF-Pro.woff2") format("woff2");
+font-weight:100 900;
+font-style:normal;
+font-display:swap;
+}
 
-    font-family: "SF Pro";
+:root{
+--background:#05070C;
+--surface:#111827;
+--text:#F5F5F5;
+--text-secondary:#A8B3C2;
+--primary:#5B8CFF;
+--primary-hover:#79A2FF;
+--border:rgba(255,255,255,.08);
+--radius:18px;
+}
 
-    src: url("./SF-Pro.woff2") format("woff2");
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    font-weight: 100 900;
+html{
+scroll-behavior:smooth;
+}
 
-    font-style: normal;
+body{
+font-family:"SF Pro",sans-serif;
+background:var(--background);
+color:var(--text);
+overflow-x:hidden;
+animation:pageEnter .5s ease forwards;
+}
 
-    font-display: swap;
+body.page-exit{
+animation:pageExit .5s ease forwards;
+}
 
+#header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:55px;
+background:rgba(5,7,12,.82);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:9999;
+}
+
+#header h1{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:1.1rem;
+font-weight:700;
+letter-spacing:4px;
+color:white;
+white-space:nowrap;
+user-select:none;
+}
+
+#navigation{
+position:absolute;
+right:35px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+gap:25px;
+}
+
+#navigation a{
+text-decoration:none;
+color:rgba(255,255,255,.75);
+font-size:.85rem;
+letter-spacing:2px;
+font-weight:600;
+transition:.25s;
+}
+
+#navigation a:hover{
+color:white;
+}
+
+#welcome-popup{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(8px);
+z-index:99999;
+}
+
+.popup{
+width:700px;
+max-width:90%;
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:45px;
+text-align:center;
+}
+
+.popup h1{
+font-size:2.2rem;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.popup p{
+color:var(--text-secondary);
+font-size:1.05rem;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+#enter-button{
+background:var(--primary);
+color:white;
+border:none;
+border-radius:12px;
+padding:15px 35px;
+font-family:inherit;
+font-size:1rem;
+cursor:pointer;
+}
+
+main{
+width:100%;
+padding-top:55px;
+}
+
+section{
+min-height:calc(100vh - 55px);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:100px 40px;
+}
+
+.home-content{
+width:100%;
+max-width:850px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.home-content h2{
+font-size:4rem;
+letter-spacing:8px;
+margin-bottom:35px;
+}
+
+.home-content p{
+max-width:700px;
+color:var(--text-secondary);
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.songs-wrapper{
+display:block;
+padding:0;
+min-height:auto;
+position:relative;
+}
+
+.songs-section{
+width:calc(100% - 120px);
+margin:260px 0 120px 60px;
+}
+
+.songs-section h3{
+font-size:2.6rem;
+letter-spacing:5px;
+margin-bottom:70px;
+}
+
+.recuerdos-index{
+position:fixed;
+top:120px;
+right:35px;
+width:220px;
+padding:25px;
+display:flex;
+flex-direction:column;
+gap:18px;
+background:rgba(17,24,39,.85);
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+z-index:9500;
+animation:indexEnter .7s cubic-bezier(.22,1,.36,1) forwards;
+will-change:transform,opacity;
+}
+
+.recuerdos-index h3{
+font-size:1rem;
+letter-spacing:3px;
+margin-bottom:5px;
+}
+
+.recuerdos-index a{
+text-decoration:none;
+color:var(--text-secondary);
+font-size:.95rem;
+transition:.25s;
+}
+
+.recuerdos-index a:hover{
+color:var(--primary-hover);
+transform:translateX(-3px);
+}
+
+.song-card{
+width:min(850px,100%);
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:35px;
+margin-bottom:80px;
+}
+
+.song-card h4{
+font-size:2.3rem;
+margin-bottom:8px;
+}
+
+.song-card h5{
+font-size:1.15rem;
+font-weight:500;
+color:var(--text-secondary);
+margin-bottom:28px;
+}
+
+.song-card p{
+font-size:1.05rem;
+line-height:1.9;
+color:var(--text-secondary);
+margin-bottom:35px;
+}
+
+.song-card iframe{
+width:100%;
+border:none;
 }
 
 
 
-:root {
+.song-card h5{
 
-    --background: #05070C;
-
-    --surface: #111827;
-
-    --text: #F5F5F5;
-
-    --text-secondary: #A8B3C2;
-
-    --primary: #5B8CFF;
-
-    --primary-hover: #79A2FF;
-
-    --border: rgba(255,255,255,.08);
-
-    --radius: 18px;
+    font-size:1.15rem;
+    font-weight:500;
+    color:var(--text-secondary);
+    margin-bottom:28px;
 
 }
 
+.song-card p{
 
-
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
+    color:var(--text-secondary);
+    font-size:1.05rem;
+    line-height:1.9;
+    text-align:left;
+    margin-bottom:35px;
 
 }
 
+.song-card iframe{
 
-
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-
-
-body {
-
-    font-family: "SF Pro", sans-serif;
-
-    background: var(--background);
-
-    color: var(--text);
-
-    overflow-x: hidden;
+    width:100%;
+    border:none;
 
 }
 
+.playlist-extra{
 
-
-/* ================= HEADER ================= */
-
-
-#header {
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 55px;
-
-
-    background: rgba(5,7,12,.82);
-
-    backdrop-filter: blur(14px);
-
-    -webkit-backdrop-filter: blur(14px);
-
-
-    border-bottom: 1px solid rgba(255,255,255,.08);
-
-    z-index: 9000;
+    text-align:center;
+    margin-top:180px;
+    margin-bottom:160px;
 
 }
 
+.playlist-extra p{
 
-
-#header h1 {
-
-    position: absolute;
-
-    top: 50%;
-
-    left: 50%;
-
-
-    transform: translate(-50%,-50%);
-
-
-    font-size: 1.1rem;
-
-    font-weight: 700;
-
-
-    color: white;
-
-
-    letter-spacing: 4px;
-
-
-    user-select: none;
-
-    white-space: nowrap;
+    font-size:1.15rem;
+    line-height:1.7;
+    color:var(--text-secondary);
+    margin-bottom:35px;
 
 }
 
+.spotify-button{
 
-
-/* ================= MENÚ ================= */
-
-
-#navigation {
-
-    position: absolute;
-
-    right: 35px;
-
-
-    top: 50%;
-
-
-    transform: translateY(-50%);
-
-
-    display: flex;
-
-    gap: 25px;
+    display:inline-block;
+    padding:14px 35px;
+    border-radius:30px;
+    background:#79A2FF;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    letter-spacing:.5px;
+    transition:.25s ease;
 
 }
 
+.spotify-button:hover{
 
-
-#navigation a {
-
-    color: rgba(255,255,255,.75);
-
-    text-decoration: none;
-
-    font-size: .85rem;
-
-    letter-spacing: 2px;
-
-    font-weight: 600;
-
-    transition: .25s ease;
+    background:#9BB9FF;
+    transform:scale(1.05);
 
 }
 
+.characters-section{
 
-
-#navigation a:hover {
-
-    color: white;
-
-}
-
-
-
-/* ================= POPUP ================= */
-
-
-#welcome-popup {
-
-    position: fixed;
-
-    inset: 0;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    background: rgba(0,0,0,.75);
-
-    backdrop-filter: blur(8px);
-
-    z-index: 9999;
+    min-height:auto;
+    display:block;
+    padding:0;
+    margin-left:60px;
+    margin-bottom:120px;
 
 }
 
+.characters-section h3{
 
-
-.popup {
-
-    width: 700px;
-
-    max-width: 90%;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    padding: 45px;
-
-    text-align: center;
+    font-size:2.6rem;
+    letter-spacing:5px;
+    color:white;
+    margin-bottom:70px;
+    text-align:left;
 
 }
 
+@keyframes popupEnter{
 
+    from{
 
-.popup h1 {
-
-    color: var(--primary);
-
-    font-size: 2.2rem;
-
-    margin-bottom: 20px;
-
-}
-
-
-
-.popup p {
-
-    color: var(--text-secondary);
-
-    font-size: 1.05rem;
-
-    line-height: 1.8;
-
-    margin-bottom: 35px;
-
-}
-
-
-
-#enter-button {
-
-    background: var(--primary);
-
-    color: white;
-
-    border: none;
-
-    border-radius: 12px;
-
-    padding: 15px 35px;
-
-    font-family: inherit;
-
-    font-size: 1rem;
-
-    cursor: pointer;
-
-}
-
-
-
-/* ================= CONTENIDO ================= */
-
-
-main {
-
-    width: 100%;
-
-    padding-top: 55px;
-
-}
-
-
-
-section {
-
-    min-height: calc(100vh - 55px);
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-direction: column;
-
-    padding: 100px 40px;
-
-}
-
-
-
-.home-content {
-
-    width: 100%;
-
-    max-width: 850px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-}
-
-
-
-.home-content h2 {
-
-    font-size: 4rem;
-
-    letter-spacing: 8px;
-
-    color: white;
-
-    margin-bottom: 35px;
-
-}
-
-
-
-.home-content p {
-
-    max-width: 700px;
-
-    color: var(--text-secondary);
-
-    font-size: 1.2rem;
-
-    line-height: 1.8;
-
-    text-align: center;
-
-}
-
-
-
-/* ========================= */
-/* CANCIONES */
-/* ========================= */
-
-
-.songs-wrapper {
-
-    min-height: auto;
-
-    display: block;
-
-    padding: 0;
-
-    position: relative;
-
-}
-
-
-
-.songs-section {
-
-    width: calc(100% - 120px);
-
-    max-width: none;
-
-    margin-top: 260px;
-
-    margin-left: 60px;
-
-    margin-bottom: 120px;
-
-    text-align: left;
-
-}
-
-
-
-.songs-section h3 {
-
-    font-size: 2.6rem;
-
-    letter-spacing: 5px;
-
-    color: white;
-
-    margin-bottom: 70px;
-
-    text-align: left;
-
-}
-
-
-
-/* ========================= */
-/* ÍNDICE LATERAL */
-/* ========================= */
-
-
-.recuerdos-index {
-
-    position: fixed;
-
-    right: 35px;
-
-    top: 120px;
-
-    width: 220px;
-
-    padding: 25px;
-
-    background: rgba(17,24,39,.85);
-
-    backdrop-filter: blur(15px);
-
-    -webkit-backdrop-filter: blur(15px);
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    border-radius: 20px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-
-    z-index: 8000;
-
-    animation: indexEnter .7s cubic-bezier(.22,1,.36,1) forwards;
-
-}
-
-
-
-.recuerdos-index h3 {
-
-    font-size: 1rem;
-
-    letter-spacing: 3px;
-
-    color: white;
-
-    margin-bottom: 5px;
-
-}
-
-
-
-.recuerdos-index a {
-
-    color: var(--text-secondary);
-
-    text-decoration: none;
-
-    font-size: .95rem;
-
-    letter-spacing: 1px;
-
-    transition: .25s ease;
-
-}
-
-
-
-.recuerdos-index a:hover {
-
-    color: var(--primary-hover);
-
-    transform: translateX(-3px);
-
-}
-
-
-/* ========================= */
-/* TARJETAS DE CANCIONES */
-/* ========================= */
-
-
-.song-card {
-
-    width: min(850px, 100%);
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    padding: 35px;
-
-    text-align: left;
-
-    margin-bottom: 80px;
-
-}
-
-
-
-.song-card h4 {
-
-    font-size: 2.3rem;
-
-    color: white;
-
-    margin-bottom: 8px;
-
-}
-
-
-
-.song-card h5 {
-
-    font-size: 1.15rem;
-
-    font-weight: 500;
-
-    color: var(--text-secondary);
-
-    margin-bottom: 28px;
-
-}
-
-
-
-.song-card p {
-
-    color: var(--text-secondary);
-
-    font-size: 1.05rem;
-
-    line-height: 1.9;
-
-    text-align: left;
-
-    margin-bottom: 35px;
-
-}
-
-
-
-.song-card iframe {
-
-    width: 100%;
-
-    border: none;
-
-}
-
-
-
-/* ========================= */
-/* PLAYLIST EXTRA */
-/* ========================= */
-
-
-.playlist-extra {
-
-    text-align: center;
-
-    margin-top: 180px;
-
-    margin-bottom: 160px;
-
-}
-
-
-
-.playlist-extra p {
-
-    font-size: 1.15rem;
-
-    line-height: 1.7;
-
-    color: var(--text-secondary);
-
-    margin-bottom: 35px;
-
-}
-
-
-
-.spotify-button {
-
-    display: inline-block;
-
-    padding: 14px 35px;
-
-    border-radius: 30px;
-
-    background: #79A2FF;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-    letter-spacing: .5px;
-
-    transition: .25s ease;
-
-}
-
-
-
-.spotify-button:hover {
-
-    background: #9BB9FF;
-
-    transform: scale(1.05);
-
-}
-
-
-
-/* ========================= */
-/* PERSONAJES */
-/* ========================= */
-
-
-.characters-section {
-
-    min-height: auto;
-
-    display: block;
-
-    padding: 0;
-
-    margin-left: 60px;
-
-    margin-bottom: 120px;
-
-}
-
-
-
-.characters-section h3 {
-
-    font-size: 2.6rem;
-
-    letter-spacing: 5px;
-
-    color: white;
-
-    margin-bottom: 70px;
-
-    text-align: left;
-
-}
-
-
-
-/* ========================= */
-/* ANIMACIONES */
-/* ========================= */
-
-
-@keyframes popupEnter {
-
-    0% {
-
-        opacity: 0;
-
-        transform: translateY(-60px);
+        opacity:0;
+        transform:translateY(-60px);
 
     }
 
+    to{
 
-    100% {
-
-        opacity: 1;
-
-        transform: translateY(0);
+        opacity:1;
+        transform:translateY(0);
 
     }
 
 }
 
+body{
 
-
-/* ========================= */
-/* TRANSICIÓN ENTRE PÁGINAS */
-/* ========================= */
-
-
-body {
-
-    animation: pageEnter .5s ease forwards;
+    animation:pageEnter .5s ease forwards;
 
 }
 
+body.page-exit{
 
-
-body.page-exit {
-
-    animation: pageExit .5s ease forwards;
+    animation:pageExit .5s ease forwards;
 
 }
 
+@keyframes pageEnter{
 
+    from{
 
-@keyframes pageEnter {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(20px);
+        opacity:0;
+        transform:translateY(20px);
 
     }
 
+    to{
 
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
+        opacity:1;
+        transform:translateY(0);
 
     }
 
 }
 
+@keyframes pageExit{
 
+    from{
 
-@keyframes pageExit {
-
-    from {
-
-        opacity: 1;
-
-        transform: translateY(0);
+        opacity:1;
+        transform:translateY(0);
 
     }
 
+    to{
 
-    to {
-
-        opacity: 0;
-
-        transform: translateY(-20px);
+        opacity:0;
+        transform:translateY(-20px);
 
     }
 
 }
 
+.recuerdos-index.exit{
 
-
-/* ========================= */
-/* ANIMACIÓN ÍNDICE */
-/* ========================= */
-
-
-.recuerdos-index.exit {
-
-    animation: indexExit .5s ease forwards;
+    animation:indexExit .5s ease forwards;
 
 }
 
+@keyframes indexEnter{
 
+    from{
 
-@keyframes indexEnter {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateX(80px);
+        opacity:0;
+        transform:translateX(80px);
 
     }
 
+    to{
 
-    to {
-
-        opacity: 1;
-
-        transform: translateX(0);
+        opacity:1;
+        transform:translateX(0);
 
     }
 
 }
 
+@keyframes indexExit{
 
+    from{
 
-@keyframes indexExit {
-
-    from {
-
-        opacity: 1;
-
-        transform: translateX(0);
+        opacity:1;
+        transform:translateX(0);
 
     }
 
+    to{
 
-    to {
-
-        opacity: 0;
-
-        transform: translateX(80px);
+        opacity:0;
+        transform:translateX(80px);
 
     }
 
 }
 
+@media(max-width:900px){
 
+    .recuerdos-index{
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-
-@media(max-width: 900px) {
-
-
-    .recuerdos-index {
-
-        display: none;
+        display:none;
 
     }
-
 
     .songs-section,
-    .characters-section {
+    .characters-section{
 
-        width: calc(100% - 40px);
-
-        margin-left: 20px;
-
-    }
-
-
-    .home-content h2 {
-
-        font-size: 2.5rem;
+        width:calc(100% - 40px);
+        margin-left:20px;
 
     }
 
+    .home-content h2{
 
-    #navigation {
-
-        display: none;
+        font-size:2.5rem;
 
     }
 
+    #navigation{
+
+        display:none;
+
+    }
 
 }
 
-
-
-/* ========================= */
-/* ANCLAS */
-/* ========================= */
-
-
 #canciones,
-#personajes {
+#personajes{
 
-    scroll-margin-top: 100px;
+    scroll-margin-top:100px;
 
 }
