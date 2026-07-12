@@ -607,6 +607,7 @@ color:white !important;
 
 #canciones,
 #personajes,
-.song-card{
+.song-card,
+.character-card{
     scroll-margin-top:100px;
 }
