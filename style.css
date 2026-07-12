@@ -32,11 +32,6 @@ font-family:"SF Pro",sans-serif;
 background:var(--background);
 color:var(--text);
 overflow-x:hidden;
-animation:pageEnter .5s ease forwards;
-}
-
-body.page-exit{
-animation:pageExit .5s ease forwards;
 }
 
 #header{
@@ -135,6 +130,11 @@ cursor:pointer;
 main{
 width:100%;
 padding-top:55px;
+animation:pageEnter .5s ease forwards;
+}
+
+body.page-exit main{
+animation:pageExit .5s ease forwards;
 }
 
 section{
@@ -361,32 +361,15 @@ border:none;
 
 }
 
-body{
-
-    animation:pageEnter .5s ease forwards;
-
-}
-
-body.page-exit{
-
-    animation:pageExit .5s ease forwards;
-
-}
 
 @keyframes pageEnter{
 
     from{
-
         opacity:0;
-        transform:translateY(20px);
-
     }
 
     to{
-
         opacity:1;
-        transform:translateY(0);
-
     }
 
 }
@@ -394,21 +377,14 @@ body.page-exit{
 @keyframes pageExit{
 
     from{
-
         opacity:1;
-        transform:translateY(0);
-
     }
 
     to{
-
         opacity:0;
-        transform:translateY(-20px);
-
     }
 
 }
-
 .recuerdos-index.exit{
 
     animation:indexExit .5s ease forwards;
