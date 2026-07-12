@@ -614,7 +614,16 @@ color:white !important;
 
     #navigation{
 
-        display:none;
+        display:flex;
+        right:15px;
+        gap:12px;
+
+    }
+
+    #navigation a{
+
+        font-size:.72rem;
+        letter-spacing:.5px;
 
     }
 
