@@ -781,3 +781,72 @@ color:white !important;
     transform:scale(1.05);
 
 }
+
+
+@media (max-width: 1200px){
+
+    #navigation{
+
+        display:flex;
+        right:20px;
+        gap:18px;
+
+    }
+
+    #navigation a{
+
+        font-size:.78rem;
+        letter-spacing:1px;
+
+    }
+
+    .home-content{
+
+        max-width:760px;
+        padding:0 20px;
+
+    }
+
+    .home-content h2{
+
+        font-size:3.2rem;
+
+    }
+
+    .home-content p{
+
+        font-size:1.1rem;
+
+    }
+
+    .songs-section,
+    .characters-section{
+
+        width:calc(100% - 60px);
+        margin-left:30px;
+        margin-right:30px;
+
+    }
+
+    .song-card,
+    .character-card{
+
+        width:100%;
+
+    }
+
+    .character-card img{
+
+        width:80%;
+
+    }
+
+    .recuerdos-index{
+
+        width:190px;
+        right:20px;
+        top:100px;
+
+    }
+
+}
