@@ -13,15 +13,19 @@
 }
 
 
+
 :root {
 
     --background: #05070C;
+
     --surface: #111827;
 
     --text: #F5F5F5;
+
     --text-secondary: #A8B3C2;
 
     --primary: #5B8CFF;
+
     --primary-hover: #79A2FF;
 
     --border: rgba(255,255,255,.08);
@@ -31,9 +35,11 @@
 }
 
 
+
 * {
 
     margin: 0;
+
     padding: 0;
 
     box-sizing: border-box;
@@ -41,11 +47,13 @@
 }
 
 
+
 html {
 
     scroll-behavior: smooth;
 
 }
+
 
 
 body {
@@ -70,16 +78,20 @@ body {
     position: fixed;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 55px;
+
 
     background: rgba(5,7,12,.82);
 
     backdrop-filter: blur(14px);
 
     -webkit-backdrop-filter: blur(14px);
+
 
     border-bottom: 1px solid rgba(255,255,255,.08);
 
@@ -88,22 +100,29 @@ body {
 }
 
 
+
 #header h1 {
 
     position: absolute;
 
     top: 50%;
+
     left: 50%;
 
+
     transform: translate(-50%,-50%);
+
 
     font-size: 1.1rem;
 
     font-weight: 700;
 
+
     color: white;
 
+
     letter-spacing: 4px;
+
 
     user-select: none;
 
@@ -122,9 +141,12 @@ body {
 
     right: 35px;
 
+
     top: 50%;
 
+
     transform: translateY(-50%);
+
 
     display: flex;
 
@@ -133,21 +155,29 @@ body {
 }
 
 
+
 #navigation a {
+
 
     color: rgba(255,255,255,.75);
 
+
     text-decoration: none;
+
 
     font-size: .85rem;
 
+
     letter-spacing: 2px;
 
+
     font-weight: 600;
+
 
     transition: .25s ease;
 
 }
+
 
 
 #navigation a:hover {
@@ -163,34 +193,30 @@ body {
 
 #welcome-popup {
 
+
     position: fixed;
+
 
     inset: 0;
 
+
     display: flex;
+
 
     justify-content: center;
 
+
     align-items: center;
+
 
     background: rgba(0,0,0,.75);
 
+
     backdrop-filter: blur(8px);
+
 
     z-index: 9999;
 
-    opacity: 1;
-
-    visibility: visible;
-
-}
-
-
-#welcome-popup.hidden {
-
-    opacity: 0;
-
-    visibility: hidden;
 
 }
 
@@ -198,43 +224,62 @@ body {
 
 .popup {
 
+
     width: 700px;
+
 
     max-width: 90%;
 
+
     background: var(--surface);
+
 
     border: 1px solid var(--border);
 
+
     border-radius: var(--radius);
+
 
     padding: 45px;
 
+
     text-align: center;
 
+
 }
+
 
 
 .popup h1 {
 
+
     color: var(--primary);
+
 
     font-size: 2.2rem;
 
+
     margin-bottom: 20px;
+
 
 }
 
 
+
 .popup p {
+
 
     color: var(--text-secondary);
 
+
     font-size: 1.05rem;
+
 
     line-height: 1.8;
 
+
     margin-bottom: 35px;
+
 
 }
 
@@ -242,21 +287,30 @@ body {
 
 #enter-button {
 
+
     background: var(--primary);
+
 
     color: white;
 
+
     border: none;
+
 
     border-radius: 12px;
 
+
     padding: 15px 35px;
+
 
     font-family: inherit;
 
+
     font-size: 1rem;
 
+
     cursor: pointer;
+
 
 }
 
@@ -267,26 +321,37 @@ body {
 
 main {
 
+
     width: 100%;
 
+
     padding-top: 55px;
+
 
 }
 
 
+
 section {
+
 
     min-height: calc(100vh - 55px);
 
+
     display: flex;
+
 
     justify-content: center;
 
+
     align-items: center;
+
 
     flex-direction: column;
 
+
     padding: 100px 40px;
+
 
 }
 
@@ -294,54 +359,75 @@ section {
 
 .home-content {
 
+
     width: 100%;
+
 
     max-width: 850px;
 
+
     display: flex;
+
 
     flex-direction: column;
 
+
     justify-content: center;
+
 
     align-items: center;
 
+
     text-align: center;
 
+
 }
+
 
 
 .home-content h2 {
 
+
     font-size: 4rem;
+
 
     letter-spacing: 8px;
 
+
     color: white;
+
 
     margin-bottom: 35px;
 
+
 }
+
 
 
 .home-content p {
 
+
     max-width: 700px;
+
 
     color: var(--text-secondary);
 
+
     font-size: 1.2rem;
+
 
     line-height: 1.8;
 
+
     text-align: center;
+
 
 }
 
 
-
-/* ================= RECUERDOS ================= */
-
+/* ========================= */
+/* CANCIONES */
+/* ========================= */
 
 .songs-wrapper {
 
@@ -368,8 +454,9 @@ section {
 
     margin-bottom: 120px;
 
-}
+    text-align: left;
 
+}
 
 
 .songs-section h3 {
@@ -382,7 +469,90 @@ section {
 
     margin-bottom: 70px;
 
+    text-align: left;
+
 }
+
+
+/* ========================= */
+/* ÍNDICE LATERAL */
+/* ========================= */
+
+.recuerdos-index {
+
+    position: fixed;
+
+    right: 35px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 220px;
+
+    padding: 25px;
+
+    background: rgba(17,24,39,.85);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    z-index: 8000;
+
+}
+
+
+.recuerdos-index h3 {
+
+    font-size: 1rem;
+
+    letter-spacing: 3px;
+
+    color: white;
+
+    margin-bottom: 5px;
+
+}
+
+
+.recuerdos-index a {
+
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-size: .95rem;
+
+    letter-spacing: 1px;
+
+    transition: .25s ease;
+
+}
+
+
+.recuerdos-index a:hover {
+
+    color: var(--primary-hover);
+
+    transform: translateX(-3px);
+
+}
+
+
+/* ========================= */
+/* TARJETAS DE CANCIONES */
+/* ========================= */
 
 
 .song-card {
@@ -453,69 +623,9 @@ section {
 
 
 
-/* ================= ÍNDICE RECUERDOS ================= */
-
-
-.recuerdos-index {
-
-    position: fixed;
-
-    left: 30px;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-
-    z-index: 100;
-
-}
-
-
-.recuerdos-index h3 {
-
-    color: white;
-
-    font-size: .9rem;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.recuerdos-index a {
-
-    color: var(--text-secondary);
-
-    text-decoration: none;
-
-    font-size: .85rem;
-
-    letter-spacing: 1.5px;
-
-    transition: .25s ease;
-
-}
-
-
-.recuerdos-index a:hover {
-
-    color: var(--primary);
-
-    transform: translateX(5px);
-
-}
-
-
-
-/* ================= PLAYLIST EXTRA ================= */
+/* ========================= */
+/* PLAYLIST EXTRA */
+/* ========================= */
 
 
 .playlist-extra {
@@ -524,18 +634,18 @@ section {
 
     margin-top: 180px;
 
-    margin-bottom: 120px;
+    margin-bottom: 160px;
 
 }
 
 
 .playlist-extra p {
 
-    color: var(--text-secondary);
-
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 
     line-height: 1.7;
+
+    color: var(--text-secondary);
 
     margin-bottom: 35px;
 
@@ -546,7 +656,7 @@ section {
 
     display: inline-block;
 
-    padding: 15px 35px;
+    padding: 14px 35px;
 
     border-radius: 30px;
 
@@ -560,7 +670,7 @@ section {
 
     letter-spacing: .5px;
 
-    transition: .3s ease;
+    transition: .25s ease;
 
 }
 
@@ -574,38 +684,45 @@ section {
 }
 
 
-
-/* ================= PERSONAJES Y MOMENTOS ================= */
+/* ========================= */
+/* PERSONAJES */
+/* ========================= */
 
 
 .characters-section {
 
-    min-height: 70vh;
+    min-height: auto;
 
-    display: flex;
+    display: block;
 
-    justify-content: center;
+    padding: 0;
 
-    align-items: center;
+    margin-left: 60px;
 
-    padding: 100px 40px;
+    margin-bottom: 120px;
 
 }
 
 
 .characters-section h3 {
 
-    font-size: 4rem;
+    font-size: 2.6rem;
 
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 
     color: white;
+
+    margin-bottom: 70px;
+
+    text-align: left;
 
 }
 
 
 
-/* ================= ANIMACIONES ================= */
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
 
 
 @keyframes popupEnter {
@@ -631,19 +748,12 @@ section {
 
 
 
-/* ================= MÓVIL ================= */
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
 
-@media (max-width: 900px) {
-
-
-    #navigation {
-
-        right: 15px;
-
-        gap: 12px;
-
-    }
+@media(max-width: 900px) {
 
 
     .recuerdos-index {
@@ -653,13 +763,12 @@ section {
     }
 
 
-    .songs-section {
+    .songs-section,
+    .characters-section {
 
         width: calc(100% - 40px);
 
         margin-left: 20px;
-
-        margin-top: 120px;
 
     }
 
@@ -671,9 +780,9 @@ section {
     }
 
 
-    .song-card {
+    #navigation {
 
-        padding: 25px;
+        display: none;
 
     }
 
