@@ -392,6 +392,47 @@ border:none;
 
 }
 
+.character-card{
+width:min(850px,100%);
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:35px;
+margin-bottom:80px;
+}
+
+.character-card h4{
+font-size:2.3rem;
+margin-bottom:8px;
+}
+
+.character-card h5{
+font-size:1.15rem;
+font-weight:500;
+color:var(--text-secondary);
+margin-bottom:28px;
+}
+
+.character-card p{
+font-size:1.05rem;
+line-height:1.9;
+color:var(--text-secondary);
+margin-bottom:35px;
+}
+
+.character-card img{
+width:100%;
+border-radius:15px;
+display:block;
+}
+
+.character-quote{
+text-align:center;
+font-size:1.4rem !important;
+color:white !important;
+}
+
+
 .playlist-extra{
 
     text-align:center;
