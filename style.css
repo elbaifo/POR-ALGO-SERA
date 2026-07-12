@@ -12,6 +12,7 @@
 
 }
 
+
 :root {
 
     --background: #05070C;
@@ -29,6 +30,7 @@
 
 }
 
+
 * {
 
     margin: 0;
@@ -38,11 +40,13 @@
 
 }
 
+
 html {
 
     scroll-behavior: smooth;
 
 }
+
 
 body {
 
@@ -56,7 +60,10 @@ body {
 
 }
 
+
+
 /* ================= HEADER ================= */
+
 
 #header {
 
@@ -71,6 +78,7 @@ body {
     background: rgba(5,7,12,.82);
 
     backdrop-filter: blur(14px);
+
     -webkit-backdrop-filter: blur(14px);
 
     border-bottom: 1px solid rgba(255,255,255,.08);
@@ -78,6 +86,7 @@ body {
     z-index: 9000;
 
 }
+
 
 #header h1 {
 
@@ -102,7 +111,10 @@ body {
 
 }
 
+
+
 /* ================= MENÚ ================= */
+
 
 #navigation {
 
@@ -120,6 +132,7 @@ body {
 
 }
 
+
 #navigation a {
 
     color: rgba(255,255,255,.75);
@@ -136,13 +149,17 @@ body {
 
 }
 
+
 #navigation a:hover {
 
     color: white;
 
 }
 
+
+
 /* ================= POPUP ================= */
+
 
 #welcome-popup {
 
@@ -166,9 +183,8 @@ body {
 
     visibility: visible;
 
-    transition: opacity .5s ease, visibility .5s ease;
-
 }
+
 
 #welcome-popup.hidden {
 
@@ -177,6 +193,8 @@ body {
     visibility: hidden;
 
 }
+
+
 
 .popup {
 
@@ -194,11 +212,8 @@ body {
 
     text-align: center;
 
-    box-shadow: 0 25px 60px rgba(0,0,0,.45);
-
-    animation: popupEnter .8s cubic-bezier(.22,1,.36,1);
-
 }
+
 
 .popup h1 {
 
@@ -209,6 +224,7 @@ body {
     margin-bottom: 20px;
 
 }
+
 
 .popup p {
 
@@ -221,6 +237,8 @@ body {
     margin-bottom: 35px;
 
 }
+
+
 
 #enter-button {
 
@@ -240,26 +258,12 @@ body {
 
     cursor: pointer;
 
-    transition: .25s ease;
-
 }
 
-#enter-button:hover {
-
-    background: var(--primary-hover);
-
-    transform: translateY(-2px) scale(1.03);
-
-}
-
-#enter-button:active {
-
-    transform: scale(.97);
-
-}
 
 
 /* ================= CONTENIDO ================= */
+
 
 main {
 
@@ -268,6 +272,7 @@ main {
     padding-top: 55px;
 
 }
+
 
 section {
 
@@ -284,6 +289,8 @@ section {
     padding: 100px 40px;
 
 }
+
+
 
 .home-content {
 
@@ -303,6 +310,7 @@ section {
 
 }
 
+
 .home-content h2 {
 
     font-size: 4rem;
@@ -314,6 +322,7 @@ section {
     margin-bottom: 35px;
 
 }
+
 
 .home-content p {
 
@@ -327,14 +336,12 @@ section {
 
     text-align: center;
 
-    margin-bottom: 20px;
-
 }
 
 
-/* ========================= */
-/* RECUERDOS */
-/* ========================= */
+
+/* ================= RECUERDOS ================= */
+
 
 .songs-wrapper {
 
@@ -344,7 +351,10 @@ section {
 
     padding: 0;
 
+    position: relative;
+
 }
+
 
 .songs-section {
 
@@ -358,9 +368,9 @@ section {
 
     margin-bottom: 120px;
 
-    text-align: left;
-
 }
+
+
 
 .songs-section h3 {
 
@@ -372,9 +382,8 @@ section {
 
     margin-bottom: 70px;
 
-    text-align: left;
-
 }
+
 
 .song-card {
 
@@ -394,6 +403,7 @@ section {
 
 }
 
+
 .song-card h4 {
 
     font-size: 2.3rem;
@@ -403,6 +413,7 @@ section {
     margin-bottom: 8px;
 
 }
+
 
 .song-card h5 {
 
@@ -415,6 +426,7 @@ section {
     margin-bottom: 28px;
 
 }
+
 
 .song-card p {
 
@@ -430,6 +442,7 @@ section {
 
 }
 
+
 .song-card iframe {
 
     width: 100%;
@@ -439,9 +452,161 @@ section {
 }
 
 
-/* ========================= */
-/* ANIMACIONES */
-/* ========================= */
+
+/* ================= ÍNDICE RECUERDOS ================= */
+
+
+.recuerdos-index {
+
+    position: fixed;
+
+    left: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    z-index: 100;
+
+}
+
+
+.recuerdos-index h3 {
+
+    color: white;
+
+    font-size: .9rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.recuerdos-index a {
+
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-size: .85rem;
+
+    letter-spacing: 1.5px;
+
+    transition: .25s ease;
+
+}
+
+
+.recuerdos-index a:hover {
+
+    color: var(--primary);
+
+    transform: translateX(5px);
+
+}
+
+
+
+/* ================= PLAYLIST EXTRA ================= */
+
+
+.playlist-extra {
+
+    text-align: center;
+
+    margin-top: 180px;
+
+    margin-bottom: 120px;
+
+}
+
+
+.playlist-extra p {
+
+    color: var(--text-secondary);
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+}
+
+
+.spotify-button {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    background: #79A2FF;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    transition: .3s ease;
+
+}
+
+
+.spotify-button:hover {
+
+    background: #9BB9FF;
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* ================= PERSONAJES Y MOMENTOS ================= */
+
+
+.characters-section {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 40px;
+
+}
+
+
+.characters-section h3 {
+
+    font-size: 4rem;
+
+    letter-spacing: 8px;
+
+    color: white;
+
+}
+
+
+
+/* ================= ANIMACIONES ================= */
+
 
 @keyframes popupEnter {
 
@@ -452,6 +617,7 @@ section {
         transform: translateY(-60px);
 
     }
+
 
     100% {
 
@@ -464,30 +630,52 @@ section {
 }
 
 
-.playlist-extra {
-    text-align: center;
-    margin-top: 220px;
-    margin-bottom: 60px;
-}
 
-.playlist-extra p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
+/* ================= MÓVIL ================= */
 
-.spotify-button {
-    display: inline-block;
-    padding: 14px 30px;
-    border-radius: 30px;
-    background: #79A2FF;
-    color: #05070C;
-    text-decoration: none;
-    font-weight: 700;
-    transition: transform 0.3s ease, background .3s ease;
-}
 
-.spotify-button:hover {
-    background: #A8C2FF;
-    transform: scale(1.05);
+@media (max-width: 900px) {
+
+
+    #navigation {
+
+        right: 15px;
+
+        gap: 12px;
+
+    }
+
+
+    .recuerdos-index {
+
+        display: none;
+
+    }
+
+
+    .songs-section {
+
+        width: calc(100% - 40px);
+
+        margin-left: 20px;
+
+        margin-top: 120px;
+
+    }
+
+
+    .home-content h2 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .song-card {
+
+        padding: 25px;
+
+    }
+
+
 }
