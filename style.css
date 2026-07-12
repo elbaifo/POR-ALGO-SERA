@@ -250,6 +250,30 @@ color:var(--primary-hover);
 transform:translateX(-3px);
 }
 
+.index-sub{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin:2px 0 10px 16px;
+}
+
+.index-sub a{
+font-size:.82rem;
+letter-spacing:.5px;
+color:var(--text-secondary);
+opacity:.85;
+transition:.25s ease;
+}
+
+.index-sub a:hover{
+color:white;
+opacity:1;
+transform:translateX(-3px);
+}
+
+.song-card{
+...
+
 .song-card{
 width:min(850px,100%);
 background:var(--surface);
