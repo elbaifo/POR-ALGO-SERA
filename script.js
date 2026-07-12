@@ -62,21 +62,31 @@ document.querySelectorAll("a").forEach(link => {
 const songsToggle = document.getElementById("songs-toggle");
 const songsMenu = document.getElementById("songs-menu");
 
-if (songsToggle && songsMenu) {
+if(songsToggle && songsMenu){
 
-    songsToggle.addEventListener("click", function () {
+    songsToggle.addEventListener("click", () => {
 
         songsMenu.classList.toggle("active");
 
-        if (songsMenu.classList.contains("active")) {
+        songsToggle.textContent =
+        songsMenu.classList.contains("active") ? "▲" : "▼";
 
-            songsToggle.innerHTML = "▲";
+    });
 
-        } else {
+}
 
-            songsToggle.innerHTML = "▼";
 
-        }
+const charactersToggle = document.getElementById("characters-toggle");
+const charactersMenu = document.getElementById("characters-menu");
+
+if(charactersToggle && charactersMenu){
+
+    charactersToggle.addEventListener("click", () => {
+
+        charactersMenu.classList.toggle("active");
+
+        charactersToggle.textContent =
+        charactersMenu.classList.contains("active") ? "▲" : "▼";
 
     });
 
