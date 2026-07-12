@@ -296,14 +296,24 @@ color:white;
 }
 
 .index-sub{
-display:none;
+display:flex;
 flex-direction:column;
 gap:10px;
 margin:2px 0 10px 16px;
+max-height:0;
+overflow:hidden;
+opacity:0;
+transform:translateY(-10px);
+transition:
+max-height .35s ease,
+opacity .25s ease,
+transform .35s ease;
 }
 
 .index-sub.active{
-display:flex;
+max-height:300px;
+opacity:1;
+transform:translateY(0);
 }
 
 .index-sub a{
