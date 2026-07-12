@@ -158,21 +158,15 @@ body {
 
 #navigation a {
 
-
     color: rgba(255,255,255,.75);
-
 
     text-decoration: none;
 
-
     font-size: .85rem;
-
 
     letter-spacing: 2px;
 
-
     font-weight: 600;
-
 
     transition: .25s ease;
 
@@ -193,30 +187,21 @@ body {
 
 #welcome-popup {
 
-
     position: fixed;
-
 
     inset: 0;
 
-
     display: flex;
-
 
     justify-content: center;
 
-
     align-items: center;
-
 
     background: rgba(0,0,0,.75);
 
-
     backdrop-filter: blur(8px);
 
-
     z-index: 9999;
-
 
 }
 
@@ -224,27 +209,19 @@ body {
 
 .popup {
 
-
     width: 700px;
-
 
     max-width: 90%;
 
-
     background: var(--surface);
-
 
     border: 1px solid var(--border);
 
-
     border-radius: var(--radius);
-
 
     padding: 45px;
 
-
     text-align: center;
-
 
 }
 
@@ -252,15 +229,11 @@ body {
 
 .popup h1 {
 
-
     color: var(--primary);
-
 
     font-size: 2.2rem;
 
-
     margin-bottom: 20px;
-
 
 }
 
@@ -268,18 +241,13 @@ body {
 
 .popup p {
 
-
     color: var(--text-secondary);
-
 
     font-size: 1.05rem;
 
-
     line-height: 1.8;
 
-
     margin-bottom: 35px;
-
 
 }
 
@@ -287,30 +255,21 @@ body {
 
 #enter-button {
 
-
     background: var(--primary);
-
 
     color: white;
 
-
     border: none;
-
 
     border-radius: 12px;
 
-
     padding: 15px 35px;
-
 
     font-family: inherit;
 
-
     font-size: 1rem;
 
-
     cursor: pointer;
-
 
 }
 
@@ -321,12 +280,9 @@ body {
 
 main {
 
-
     width: 100%;
 
-
     padding-top: 55px;
-
 
 }
 
@@ -334,24 +290,17 @@ main {
 
 section {
 
-
     min-height: calc(100vh - 55px);
-
 
     display: flex;
 
-
     justify-content: center;
-
 
     align-items: center;
 
-
     flex-direction: column;
 
-
     padding: 100px 40px;
-
 
 }
 
@@ -359,27 +308,19 @@ section {
 
 .home-content {
 
-
     width: 100%;
-
 
     max-width: 850px;
 
-
     display: flex;
-
 
     flex-direction: column;
 
-
     justify-content: center;
-
 
     align-items: center;
 
-
     text-align: center;
-
 
 }
 
@@ -387,18 +328,13 @@ section {
 
 .home-content h2 {
 
-
     font-size: 4rem;
-
 
     letter-spacing: 8px;
 
-
     color: white;
 
-
     margin-bottom: 35px;
-
 
 }
 
@@ -406,28 +342,24 @@ section {
 
 .home-content p {
 
-
     max-width: 700px;
-
 
     color: var(--text-secondary);
 
-
     font-size: 1.2rem;
-
 
     line-height: 1.8;
 
-
     text-align: center;
 
-
 }
+
 
 
 /* ========================= */
 /* CANCIONES */
 /* ========================= */
+
 
 .songs-wrapper {
 
@@ -440,6 +372,7 @@ section {
     position: relative;
 
 }
+
 
 
 .songs-section {
@@ -459,6 +392,7 @@ section {
 }
 
 
+
 .songs-section h3 {
 
     font-size: 2.6rem;
@@ -474,9 +408,11 @@ section {
 }
 
 
+
 /* ========================= */
 /* ÍNDICE LATERAL */
 /* ========================= */
+
 
 .recuerdos-index {
 
@@ -484,9 +420,7 @@ section {
 
     right: 35px;
 
-    top: 50%;
-
-    transform: translateY(-50%);
+    top: 120px;
 
     width: 220px;
 
@@ -510,7 +444,10 @@ section {
 
     z-index: 8000;
 
+    animation: indexEnter .7s cubic-bezier(.22,1,.36,1) forwards;
+
 }
+
 
 
 .recuerdos-index h3 {
@@ -526,6 +463,7 @@ section {
 }
 
 
+
 .recuerdos-index a {
 
     color: var(--text-secondary);
@@ -539,6 +477,7 @@ section {
     transition: .25s ease;
 
 }
+
 
 
 .recuerdos-index a:hover {
@@ -574,6 +513,7 @@ section {
 }
 
 
+
 .song-card h4 {
 
     font-size: 2.3rem;
@@ -583,6 +523,7 @@ section {
     margin-bottom: 8px;
 
 }
+
 
 
 .song-card h5 {
@@ -598,6 +539,7 @@ section {
 }
 
 
+
 .song-card p {
 
     color: var(--text-secondary);
@@ -611,6 +553,7 @@ section {
     margin-bottom: 35px;
 
 }
+
 
 
 .song-card iframe {
@@ -639,6 +582,7 @@ section {
 }
 
 
+
 .playlist-extra p {
 
     font-size: 1.15rem;
@@ -650,6 +594,7 @@ section {
     margin-bottom: 35px;
 
 }
+
 
 
 .spotify-button {
@@ -675,6 +620,7 @@ section {
 }
 
 
+
 .spotify-button:hover {
 
     background: #9BB9FF;
@@ -682,6 +628,7 @@ section {
     transform: scale(1.05);
 
 }
+
 
 
 /* ========================= */
@@ -702,6 +649,7 @@ section {
     margin-bottom: 120px;
 
 }
+
 
 
 .characters-section h3 {
@@ -741,6 +689,132 @@ section {
         opacity: 1;
 
         transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* ========================= */
+/* TRANSICIÓN ENTRE PÁGINAS */
+/* ========================= */
+
+
+body {
+
+    animation: pageEnter .5s ease forwards;
+
+}
+
+
+
+body.page-exit {
+
+    animation: pageExit .5s ease forwards;
+
+}
+
+
+
+@keyframes pageEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes pageExit {
+
+    from {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+    to {
+
+        opacity: 0;
+
+        transform: translateY(-20px);
+
+    }
+
+}
+
+
+
+/* ========================= */
+/* ANIMACIÓN ÍNDICE */
+/* ========================= */
+
+
+.recuerdos-index.exit {
+
+    animation: indexExit .5s ease forwards;
+
+}
+
+
+
+@keyframes indexEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(80px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+@keyframes indexExit {
+
+    from {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+
+    to {
+
+        opacity: 0;
+
+        transform: translateX(80px);
 
     }
 
@@ -790,134 +864,15 @@ section {
 }
 
 
+
+/* ========================= */
+/* ANCLAS */
+/* ========================= */
+
+
 #canciones,
 #personajes {
+
     scroll-margin-top: 100px;
-}
-
-
-
-/* ========================= */
-/* TRANSICIONES ENTRE PÁGINAS */
-/* ========================= */
-
-body {
-
-    animation: pageEnter .5s ease forwards;
-
-}
-
-
-body.page-exit {
-
-    animation: pageExit .5s ease forwards;
-
-}
-
-
-@keyframes pageEnter {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(20px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
-}
-
-
-@keyframes pageExit {
-
-    from {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
-    to {
-
-        opacity: 0;
-
-        transform: translateY(-20px);
-
-    }
-
-}
-
-
-
-/* ========================= */
-/* ANIMACIÓN ÍNDICE RECUERDOS */
-/* ========================= */
-
-
-.recuerdos-index {
-
-    animation: indexEnter .7s cubic-bezier(.22,1,.36,1) forwards;
-
-}
-
-
-.recuerdos-index.exit {
-
-    animation: indexExit .5s ease forwards;
-
-}
-
-
-
-@keyframes indexEnter {
-
-    from {
-
-        opacity: 0;
-
-        transform: translate(80px,-50%);
-
-    }
-
-
-    to {
-
-        opacity: 1;
-
-        transform: translate(0,-50%);
-
-    }
-
-}
-
-
-
-@keyframes indexExit {
-
-    from {
-
-        opacity: 1;
-
-        transform: translate(0,-50%);
-
-    }
-
-
-    to {
-
-        opacity: 0;
-
-        transform: translate(80px,-50%);
-
-    }
 
 }
