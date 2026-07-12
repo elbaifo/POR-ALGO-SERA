@@ -285,10 +285,20 @@ gap:8px;
 .index-title button{
 
     all:unset;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     cursor:pointer;
     color:var(--text-secondary);
     font-size:.9rem;
     transition:.25s;
+    outline:none;
+
+}
+
+.index-title button:focus{
+
+    outline:none;
 
 }
 
