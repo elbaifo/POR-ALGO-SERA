@@ -68,11 +68,8 @@ if(songsToggle && songsMenu){
 
         songsMenu.classList.toggle("active");
 
-        if(songsMenu.classList.contains("active")){
-            songsToggle.textContent = "▲";
-        }else{
-            songsToggle.textContent = "▼";
-        }
+        songsToggle.textContent = 
+        songsMenu.classList.contains("active") ? "▲" : "▼";
 
     });
 
