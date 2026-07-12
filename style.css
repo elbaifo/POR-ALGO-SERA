@@ -279,14 +279,6 @@ border-radius:var(--radius);
 padding:35px;
 margin-bottom:80px;
 }
-.song-card{
-width:min(850px,100%);
-background:var(--surface);
-border:1px solid var(--border);
-border-radius:var(--radius);
-padding:35px;
-margin-bottom:80px;
-}
 
 .song-card h4{
 font-size:2.3rem;
