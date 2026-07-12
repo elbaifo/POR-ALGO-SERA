@@ -299,7 +299,7 @@ color:white;
 display:flex;
 flex-direction:column;
 gap:10px;
-margin:2px 0 10px 16px;
+margin:0 0 0 16px;
 max-height:0;
 overflow:hidden;
 opacity:0;
@@ -312,6 +312,7 @@ transform .35s ease;
 
 .index-sub.active{
 max-height:300px;
+margin:2px 0 10px 16px;
 opacity:1;
 transform:translateY(0);
 }
