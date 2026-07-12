@@ -646,11 +646,11 @@ color:white !important;
     color:white;
     overflow:hidden;
 
-    z-index:9998;
+    z-index:100000;
 
     animation:
         lovePopupEnter .45s ease forwards,
-        lovePopupExit .45s ease forwards 6.55s;
+        lovePopupExit .45s ease forwards 9.55s;
 
 }
 
@@ -674,7 +674,7 @@ color:white !important;
     background:white;
 
     transform-origin:left;
-    animation:loadingBar 7s linear forwards;
+    animation:loadingBar 10s linear forwards;
 
 }
 
