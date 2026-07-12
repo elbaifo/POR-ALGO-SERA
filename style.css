@@ -794,3 +794,130 @@ section {
 #personajes {
     scroll-margin-top: 100px;
 }
+
+
+
+/* ========================= */
+/* TRANSICIONES ENTRE PÁGINAS */
+/* ========================= */
+
+body {
+
+    animation: pageEnter .5s ease forwards;
+
+}
+
+
+body.page-exit {
+
+    animation: pageExit .5s ease forwards;
+
+}
+
+
+@keyframes pageEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes pageExit {
+
+    from {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform: translateY(-20px);
+
+    }
+
+}
+
+
+
+/* ========================= */
+/* ANIMACIÓN ÍNDICE RECUERDOS */
+/* ========================= */
+
+
+.recuerdos-index {
+
+    animation: indexEnter .7s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+
+.recuerdos-index.exit {
+
+    animation: indexExit .5s ease forwards;
+
+}
+
+
+
+@keyframes indexEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translate(80px,-50%);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translate(0,-50%);
+
+    }
+
+}
+
+
+
+@keyframes indexExit {
+
+    from {
+
+        opacity: 1;
+
+        transform: translate(0,-50%);
+
+    }
+
+
+    to {
+
+        opacity: 0;
+
+        transform: translate(80px,-50%);
+
+    }
+
+}
