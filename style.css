@@ -127,6 +127,7 @@ border:1px solid var(--border);
 border-radius:var(--radius);
 padding:45px;
 text-align:center;
+animation:popupEnter .6s cubic-bezier(.22,1,.36,1) forwards;
 }
 
 .popup h1{
@@ -140,6 +141,31 @@ color:var(--text-secondary);
 font-size:1.05rem;
 line-height:1.8;
 margin-bottom:35px;
+}
+
+#welcome-popup.hidden{
+
+    animation:popupExit .5s ease forwards;
+
+}
+
+
+@keyframes popupExit{
+
+    from{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+        transform:scale(.95);
+
+    }
+
 }
 
 #enter-button{
