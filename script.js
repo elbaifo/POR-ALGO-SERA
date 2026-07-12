@@ -57,3 +57,23 @@ document.querySelectorAll("a").forEach(link => {
     }
 
 });
+
+
+const songsToggle = document.getElementById("songs-toggle");
+const songsMenu = document.querySelector(".index-sub");
+
+if(songsToggle && songsMenu){
+
+    songsToggle.addEventListener("click", () => {
+
+        songsMenu.classList.toggle("active");
+
+        if(songsMenu.classList.contains("active")){
+            songsToggle.textContent = "▲";
+        }else{
+            songsToggle.textContent = "▼";
+        }
+
+    });
+
+}
