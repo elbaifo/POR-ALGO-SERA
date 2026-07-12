@@ -505,8 +505,7 @@ border:none;
 }
 
 #canciones,
-#personajes{
-
+#personajes,
+.song-card{
     scroll-margin-top:100px;
-
 }
