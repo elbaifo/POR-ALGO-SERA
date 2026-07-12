@@ -60,7 +60,7 @@ document.querySelectorAll("a").forEach(link => {
 
 
 const songsToggle = document.getElementById("songs-toggle");
-const songsMenu = document.querySelector(".index-sub");
+const songsMenu = document.getElementById("songs-menu");
 
 if (songsToggle && songsMenu) {
 
