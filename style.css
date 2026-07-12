@@ -729,3 +729,55 @@ color:white !important;
     }
 
 }
+
+.story-letter{
+
+    max-width:850px;
+    margin:40px auto 70px;
+    text-align:left;
+
+}
+
+.story-letter p{
+
+    color:var(--text-secondary);
+    font-size:1.15rem;
+    line-height:2;
+    margin-bottom:32px;
+
+}
+
+.story-highlight{
+
+    text-align:center;
+    font-size:2rem !important;
+    font-weight:700;
+    letter-spacing:3px;
+    color:white !important;
+    margin:50px 0;
+
+}
+
+.story-button{
+
+    display:inline-block;
+    padding:16px 40px;
+    border-radius:30px;
+
+    background:var(--primary);
+    color:white;
+
+    text-decoration:none;
+    font-weight:700;
+    letter-spacing:.5px;
+
+    transition:.25s ease;
+
+}
+
+.story-button:hover{
+
+    background:var(--primary-hover);
+    transform:scale(1.05);
+
+}
