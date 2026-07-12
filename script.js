@@ -91,3 +91,16 @@ if(charactersToggle && charactersMenu){
     });
 
 }
+
+
+const loveLoading = document.getElementById("love-loading");
+
+if (loveLoading) {
+
+    setTimeout(() => {
+
+        loveLoading.remove();
+
+    }, 7000);
+
+}
