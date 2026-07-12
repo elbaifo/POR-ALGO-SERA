@@ -763,48 +763,72 @@ color:white !important;
 }
 
 
-@media (max-width: 1200px){
+@media (max-width:1200px){
+
+    #header{
+
+        height:70px;
+
+    }
+
+    #header h1{
+
+        font-size:1.3rem;
+        letter-spacing:3px;
+
+    }
 
     #navigation{
 
-        display:flex;
-        right:20px;
-        gap:18px;
+        right:30px;
+        gap:22px;
 
     }
 
     #navigation a{
 
-        font-size:.78rem;
+        font-size:.95rem;
         letter-spacing:1px;
+
+    }
+
+    section{
+
+        padding:90px 35px;
 
     }
 
     .home-content{
 
-        max-width:760px;
-        padding:0 20px;
+        max-width:820px;
+        padding:0 30px;
 
     }
 
     .home-content h2{
 
-        font-size:3.2rem;
+        font-size:3.3rem;
 
     }
 
     .home-content p{
 
-        font-size:1.1rem;
+        font-size:1.2rem;
+        line-height:1.9;
 
     }
 
-    .songs-section,
+    .songs-section{
+
+        width:calc(100% - 70px);
+        margin:220px 35px 100px;
+
+    }
+
     .characters-section{
 
-        width:calc(100% - 60px);
-        margin-left:30px;
-        margin-right:30px;
+        width:calc(100% - 70px);
+        margin:0 35px 100px;
 
     }
 
@@ -812,20 +836,55 @@ color:white !important;
     .character-card{
 
         width:100%;
+        padding:40px;
+
+    }
+
+    .song-card h4,
+    .character-card h4{
+
+        font-size:2rem;
+
+    }
+
+    .song-card p,
+    .character-card p{
+
+        font-size:1.1rem;
 
     }
 
     .character-card img{
 
-        width:80%;
+        width:85%;
+
+    }
+
+    .story-letter{
+
+        max-width:760px;
+        padding:0 20px;
+
+    }
+
+    .story-letter p{
+
+        font-size:1.2rem;
+
+    }
+
+    .story-button{
+
+        font-size:1rem;
+        padding:18px 40px;
 
     }
 
     .recuerdos-index{
 
-        width:190px;
+        width:220px;
         right:20px;
-        top:100px;
+        top:95px;
 
     }
 
