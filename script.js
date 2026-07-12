@@ -97,10 +97,10 @@ const loveLoading = document.getElementById("love-loading");
 
 if (loveLoading) {
 
-    setTimeout(() => {
+   setTimeout(() => {
 
-        loveLoading.remove();
+    loveLoading.remove();
 
-    }, 7000);
+}, 10000);
 
 }
