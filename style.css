@@ -1055,3 +1055,69 @@ color:white !important;
 .story-letter p{
     font-size:1rem;
 }
+
+
+
+@media (max-width:900px){
+
+    .recuerdos-index{
+
+        display:flex;
+        flex-direction:column;
+
+        width:220px;
+
+        top:95px;
+        right:-185px;
+
+        transition:right .35s ease;
+
+        z-index:9999;
+
+    }
+
+    .recuerdos-index.open{
+
+        right:10px;
+
+    }
+
+    #mobile-index-toggle{
+
+        position:absolute;
+
+        left:-35px;
+        top:18px;
+
+        width:35px;
+        height:45px;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        border:none;
+        border-radius:12px 0 0 12px;
+
+        background:rgba(17,24,39,.92);
+
+        color:white;
+        font-size:1rem;
+
+        cursor:pointer;
+
+    }
+
+    .recuerdos-index h3{
+
+        font-size:.9rem;
+
+    }
+
+    .recuerdos-index a{
+
+        font-size:.8rem;
+
+    }
+
+}
