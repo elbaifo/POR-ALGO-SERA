@@ -104,3 +104,26 @@ if (loveLoading) {
 }, 10000);
 
 }
+
+const mobileIndex = document.querySelector(".recuerdos-index");
+const mobileIndexToggle = document.getElementById("mobile-index-toggle");
+
+if (mobileIndex && mobileIndexToggle) {
+
+    mobileIndexToggle.addEventListener("click", () => {
+
+        mobileIndex.classList.toggle("open");
+
+        if (mobileIndex.classList.contains("open")) {
+
+            mobileIndexToggle.textContent = "❯";
+
+        } else {
+
+            mobileIndexToggle.textContent = "❮";
+
+        }
+
+    });
+
+}
