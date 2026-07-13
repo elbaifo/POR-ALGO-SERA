@@ -97,11 +97,21 @@ const loveLoading = document.getElementById("love-loading");
 
 if (loveLoading) {
 
-   setTimeout(() => {
+    if (sessionStorage.getItem("loveLoaded")) {
 
-    loveLoading.remove();
+        loveLoading.remove();
 
-}, 10000);
+    } else {
+
+        sessionStorage.setItem("loveLoaded", "true");
+
+        setTimeout(() => {
+
+            loveLoading.remove();
+
+        }, window.innerWidth <= 900 ? 4500 : 10000);
+
+    }
 
 }
 
