@@ -942,7 +942,13 @@ color:white !important;
 
     animation:
         lovePopupEnterMobile .45s ease forwards,
-        lovePopupExitMobile .45s ease forwards 9.55s;
+        lovePopupExitMobile .45s ease forwards 4.05s;
+
+}
+
+.loading-progress{
+
+    animation:loadingBar 4.5s linear forwards;
 
 }
 
