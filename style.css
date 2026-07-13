@@ -893,4 +893,35 @@ color:white !important;
 
 @media (max-width:900px){
 
+#header{
+
+    height:55px;
+
+}
+
+#header h1{
+
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+
+    font-size:.78rem;
+    letter-spacing:1px;
+
+}
+
+#navigation{
+
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    gap:10px;
+
+}
+
+#navigation a{
+
+    font-size:.68rem;
+    letter-spacing:0;
+
 }
