@@ -897,6 +897,12 @@ color:white !important;
 
 }
 
+#mobile-index-toggle{
+
+    display:none;
+
+}
+
 
 @media (max-width:900px){
 
