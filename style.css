@@ -590,6 +590,13 @@ color:white !important;
 
 }
 
+.recuerdos-index a:hover{
+    color:var(--primary-hover);
+    transform:translateX(-3px);
+}
+
+
+
 @media(max-width:900px){
 
     .recuerdos-index{
