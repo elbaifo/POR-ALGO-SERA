@@ -1017,3 +1017,43 @@ color:white !important;
 }
 
 }
+
+
+.home-content h2{
+    font-size:2.2rem;
+}
+
+.home-content p{
+    font-size:1rem;
+}
+
+.songs-section h3,
+.characters-section h3{
+    font-size:2rem;
+}
+
+.song-card h4,
+.character-card h4{
+    font-size:1.6rem;
+}
+
+.song-card h5,
+.character-card h5{
+    font-size:1rem;
+}
+
+.song-card p,
+.character-card p{
+    font-size:.95rem;
+    line-height:1.7;
+}
+
+.story-highlight{
+    font-size:1.6rem !important;
+}
+
+.story-letter p{
+    font-size:1rem;
+}
+
+}
