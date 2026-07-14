@@ -252,20 +252,31 @@ margin-bottom:70px;
 
 .recuerdos-index{
 position:fixed;
+
 top:120px;
 right:35px;
+
 width:220px;
 padding:25px;
+
 display:flex;
 flex-direction:column;
 gap:18px;
-background:rgba(17,24,39,.85);
-backdrop-filter:blur(15px);
--webkit-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,.08);
+
+background:var(--surface);
+
+backdrop-filter:blur(var(--glass-blur)) saturate(180%);
+-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
+
+border:1px solid var(--border);
+box-shadow:var(--glass-shadow);
+
 border-radius:20px;
+
 z-index:9500;
+
 animation:indexEnter .7s cubic-bezier(.22,1,.36,1) forwards;
+
 will-change:transform,opacity;
 }
 
