@@ -430,11 +430,22 @@ border:none;
 
 .character-card{
 width:min(850px,100%);
+
 background:var(--surface);
+
+backdrop-filter:blur(var(--glass-blur)) saturate(180%);
+-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);
+
 border:1px solid var(--border);
+box-shadow:var(--glass-shadow);
+
 border-radius:var(--radius);
+
 padding:35px;
 margin-bottom:80px;
+
+position:relative;
+overflow:hidden;
 }
 
 .character-card h4{
