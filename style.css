@@ -8,15 +8,19 @@ font-display:swap;
 
 :root{
 --background:#05070C;
---surface:#111827;
+--surface:rgba(28,28,30,.65);
 --text:#F5F5F5;
 --text-secondary:#A8B3C2;
 --primary:#5B8CFF;
 --primary-hover:#79A2FF;
---border:rgba(255,255,255,.08);
+--border:rgba(255,255,255,.15);
 --radius:18px;
-}
 
+--glass-blur:25px;
+--glass-shadow:
+0 20px 50px rgba(0,0,0,.35),
+inset 0 1px 0 rgba(255,255,255,.15);
+}
 *{
 margin:0;
 padding:0;
