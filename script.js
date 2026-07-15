@@ -20,6 +20,7 @@ if (enterButton) {
     });
 }
 
+
 window.addEventListener("scroll", () => {
 
     if (window.scrollY > 30) {
@@ -29,6 +30,7 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
 
 document.querySelectorAll("a").forEach(link => {
 
@@ -62,7 +64,7 @@ document.querySelectorAll("a").forEach(link => {
 const songsToggle = document.getElementById("songs-toggle");
 const songsMenu = document.getElementById("songs-menu");
 
-if(songsToggle && songsMenu){
+if (songsToggle && songsMenu) {
 
     songsToggle.addEventListener("click", () => {
 
@@ -79,7 +81,7 @@ if(songsToggle && songsMenu){
 const charactersToggle = document.getElementById("characters-toggle");
 const charactersMenu = document.getElementById("characters-menu");
 
-if(charactersToggle && charactersMenu){
+if (charactersToggle && charactersMenu) {
 
     charactersToggle.addEventListener("click", () => {
 
@@ -115,6 +117,7 @@ if (loveLoading) {
 
 }
 
+
 const mobileIndex = document.querySelector(".recuerdos-index");
 const mobileIndexToggle = document.getElementById("mobile-index-toggle");
 
@@ -135,5 +138,30 @@ if (mobileIndex && mobileIndexToggle) {
         }
 
     });
+
+}
+
+
+/* CONTADOR PERSONAL DE RECUERDOS */
+
+const visitCounter = document.getElementById("visit-count");
+
+if (visitCounter) {
+
+    let visits = localStorage.getItem("loveVisits");
+
+    if (!visits) {
+
+        visits = 1;
+
+    } else {
+
+        visits = Number(visits) + 1;
+
+    }
+
+    localStorage.setItem("loveVisits", visits);
+
+    visitCounter.textContent = visits;
 
 }
