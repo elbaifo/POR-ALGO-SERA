@@ -173,8 +173,6 @@ if (visitCounter) {
 
 
 
-/* CONTADOR DE TIEMPO JUNTOS */
-
 const daysElement = document.getElementById("days");
 const hoursElement = document.getElementById("hours");
 const minutesElement = document.getElementById("minutes");
@@ -184,7 +182,7 @@ const secondsElement = document.getElementById("seconds");
 if (daysElement && hoursElement && minutesElement && secondsElement) {
 
 
-    const startDate = new Date("2026-06-08T00:00:00");
+    const startDate = new Date("2026-07-08T00:00:00");
 
 
     function updateLoveTime(){
