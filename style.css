@@ -1250,3 +1250,175 @@ color:white !important;
     }
 
 }
+
+
+
+/* =========================
+   SECCIÓN TIEMPO
+========================= */
+
+.time-section{
+
+    min-height:calc(100vh - 55px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:100px 40px;
+
+}
+
+
+.time-content{
+
+    width:100%;
+    max-width:850px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+
+.time-content h2{
+
+    font-size:4rem;
+    letter-spacing:8px;
+    margin-bottom:35px;
+    color:white;
+
+}
+
+
+.time-content p{
+
+    max-width:700px;
+    color:var(--text-secondary);
+    font-size:1.2rem;
+    line-height:1.8;
+
+}
+
+
+.love-time{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+
+    margin:55px 0;
+
+}
+
+
+.time-box{
+
+    width:130px;
+    height:130px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(17,24,39,.75);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+}
+
+
+.time-box span{
+
+    font-size:3.5rem;
+    font-weight:800;
+    color:var(--primary);
+
+    line-height:1;
+
+}
+
+
+.time-box small{
+
+    margin-top:12px;
+
+    font-size:.8rem;
+    letter-spacing:3px;
+
+    color:var(--text-secondary);
+
+}
+
+
+.time-message{
+
+    margin-top:20px;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+    .time-content h2{
+
+        font-size:2.2rem;
+        letter-spacing:5px;
+
+    }
+
+
+    .time-content p{
+
+        font-size:1rem;
+
+    }
+
+
+    .love-time{
+
+        gap:10px;
+        margin:40px 0;
+
+    }
+
+
+    .time-box{
+
+        width:75px;
+        height:75px;
+
+        border-radius:15px;
+
+    }
+
+
+    .time-box span{
+
+        font-size:1.8rem;
+
+    }
+
+
+    .time-box small{
+
+        font-size:.55rem;
+        letter-spacing:1px;
+
+        margin-top:5px;
+
+    }
+
+
+}
