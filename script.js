@@ -170,3 +170,59 @@ if (visitCounter) {
     visitCounter.textContent = visits;
 
 }
+
+
+
+/* CONTADOR DE TIEMPO JUNTOS */
+
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
+
+
+if (daysElement && hoursElement && minutesElement && secondsElement) {
+
+
+    const startDate = new Date("2026-06-08T00:00:00");
+
+
+    function updateLoveTime(){
+
+
+        const now = new Date();
+
+        const difference = now - startDate;
+
+
+        const totalSeconds = Math.floor(difference / 1000);
+
+
+        const days = Math.floor(totalSeconds / 86400);
+
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+
+        const seconds = totalSeconds % 60;
+
+
+
+        daysElement.textContent = days;
+
+        hoursElement.textContent = String(hours).padStart(2,"0");
+
+        minutesElement.textContent = String(minutes).padStart(2,"0");
+
+        secondsElement.textContent = String(seconds).padStart(2,"0");
+
+
+    }
+
+
+    updateLoveTime();
+
+    setInterval(updateLoveTime,1000);
+
+
+}
