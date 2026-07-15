@@ -142,7 +142,6 @@ if (mobileIndex && mobileIndexToggle) {
 }
 
 
-/* CONTADOR PERSONAL DE RECUERDOS */
 
 const visitCounter = document.getElementById("visit-count");
 
@@ -150,17 +149,23 @@ if (visitCounter) {
 
     let visits = localStorage.getItem("loveVisits");
 
-    if (!visits) {
+    if (!sessionStorage.getItem("loveVisitCounted")) {
 
-        visits = 1;
+        if (!visits) {
 
-    } else {
+            visits = 1;
 
-        visits = Number(visits) + 1;
+        } else {
+
+            visits = Number(visits) + 1;
+
+        }
+
+        localStorage.setItem("loveVisits", visits);
+
+        sessionStorage.setItem("loveVisitCounted", "true");
 
     }
-
-    localStorage.setItem("loveVisits", visits);
 
     visitCounter.textContent = visits;
 
