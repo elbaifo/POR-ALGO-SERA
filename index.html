@@ -11,6 +11,10 @@
     <link rel="icon" href="./favicon.png" type="image/png">
     <link rel="shortcut icon" href="./favicon.png" type="image/png">
 
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#05070C">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -23,22 +27,20 @@
 
     <div id="background-overlay"></div>
 
-
     <header id="header">
 
         <h1>POR ALGO SERÁ</h1>
 
         <nav id="navigation">
 
-    <a href="index.html">INICIO</a>
-    <a href="recuerdos.html">RECUERDOS</a>
-    <a href="historia.html">HISTORIA</a>
-    <a href="tiempo.html">TIEMPO</a>
+            <a href="index.html">INICIO</a>
+            <a href="recuerdos.html">RECUERDOS</a>
+            <a href="historia.html">HISTORIA</a>
+            <a href="tiempo.html">TIEMPO</a>
 
-</nav>
+        </nav>
 
     </header>
-
 
     <div id="welcome-popup">
 
@@ -65,7 +67,6 @@
 
     </div>
 
-
     <div id="love-loading">
 
         <span>Cargando todo mi amor...</span>
@@ -73,7 +74,6 @@
         <div class="loading-progress"></div>
 
     </div>
-
 
     <main>
 
@@ -100,7 +100,7 @@
                     Espero que te guste, todo esto esta hecho con todo mi amor,
                     al final, mi profesora de programación tenía razón cuando me dijo que con todos los dieces
                     que había sacado durante el curso podría llegar a hacer algo muy grande,
-                    y hasta ahora no había hecho nada, hasta conocerte a tí. te amo.
+                    y hasta ahora no había hecho nada, hasta conocerte a tí. Te amo.
                 </p>
 
                 <p>
@@ -118,15 +118,27 @@
 
                 </div>
 
-
             </div>
 
         </section>
 
     </main>
 
-
     <script src="script.js"></script>
+
+    <script>
+
+        if("serviceWorker" in navigator){
+
+            window.addEventListener("load",()=>{
+
+                navigator.serviceWorker.register("./service-worker.js");
+
+            });
+
+        }
+
+    </script>
 
 </body>
 
