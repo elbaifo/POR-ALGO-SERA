@@ -182,7 +182,7 @@ const secondsElement = document.getElementById("seconds");
 if (daysElement && hoursElement && minutesElement && secondsElement) {
 
 
-    const startDate = new Date("2026-07-08T00:00:00");
+    const startDate = new Date("2025-02-11T00:00:00");
 
 
     function updateLoveTime(){
